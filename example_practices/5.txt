@@ -1,0 +1,26 @@
+300 swim
+200 kick
+200 pull
+200 drill
+100 swim
+(1000/1000)
+
+6x50 @ :50 odds drill/events kick/sw
+8x25 @ :30 fast finish/fast breakout
+(500/1500)
+
+Main set
+9x100 free threshold
+1: swim                     @ 1:15
+2: 50 kick/50 swim @ 1:25
+3: kick                      @ 1:35
+1x100 easy
+
+9x100 stroke threshold
+1: swim                     @ 1:20
+2: 50 kick/50 swim @ 1:30
+3: kick                      @ 1:40
+(1900/3400)
+
+300 WD
+

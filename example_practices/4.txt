@@ -1,0 +1,27 @@
+200 swim
+200 kick
+200 pull
+200 drill
+(800/800)
+
+4 x through
+1 x 200 on 2:40   free swim
+	1 x 75  on 1:20   stroke kick/drill/swim
+	3 x 25  on 0:30   stroke descend to pace
+	1 x 50  on 1:00   stroke hold pace
+
+100 easy
+(1700/2500)
+
+3 x 100 on 1:30  free aerobic
+4 x 50  on 0:50  stroke at 200 pace
+1 x 200 on 3:00  easy
+1:00 rest
+3 x 100 on 1:30  free aerobic
+1 x 75  on 1:05  stroke at 200 pace
+2 x 50  on 0:50  stroke at 200 pace
+1 x 25  on 0:25  stroke at 200 pace
+(1500/4000)
+
+200 WD
+

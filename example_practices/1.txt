@@ -1,0 +1,28 @@
+300 swim
+200 kick
+200 pull
+2x [4x25 @ :35 variable] (build/fast breakout/fast/easy by 25)
+(1000/1000)
+
+2x100 @ 1:30 swim
+4x50 @ :55 kick
+2x100 @ 1:25 swim
+4x50 @ :55 drill choice
+2x100 @ 1:20 swim
+4x50 on :50 power 15m off wall choice
+100 easy
+(1300/2300)
+
+7x200
+200 on 2:50 free swim
+200 on 3:20 kick
+200 on 2:55 back swim
+200 on 3:05 kick faster
+200 on 2:40 free faster
+200 on 2:50 kick fastest
+200 on 2:45 back faster
+(1400/3700)
+
+300 WD
+(300/4000)
+

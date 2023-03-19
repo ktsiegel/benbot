@@ -1,0 +1,29 @@
+300 sw
+200 k
+200 pull
+200 drill
+(1000/1000)
+
+Free drill
+4x25 head lead kick :30
+4x25 single arm     :30
+4x25 3 kick switch  :30
+4x25 fingertip drag :30
+1x100 ez
+(500/1500)
+
+9x200
+200 swim       2:30
+175 swim/25 k  2:35
+150 swim/50 k  2:35
+125 swim/75 k  2:40
+100 swim/100 k 2:40
+75 swim/125 k  2:45
+50 swim/150 k  2:45
+25 swim/175 k  2:50
+200 k          2:50
+(1800/3300)
+
+300 WD
+3600 total
+
