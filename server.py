@@ -2,8 +2,11 @@ import os
 import openai
 
 from dotenv import load_dotenv
+from functools import cache
 
 from flask import Flask, jsonify
+from glob import glob
+from os.path import join, abspath
 
 app = Flask(__name__)
 
@@ -11,8 +14,17 @@ app = Flask(__name__)
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+def make_practice_corpus():
+    full_path = join("example_practices", "*.txt")
+    corpus = ""
+    for filename in glob(full_path):
+        with open(filename, 'r') as f:
+            corpus += "Next practice:\n"
+            corpus += f.read()
+    return corpus
+
 # Read in corpus
-EXAMPLE_PRACTICES = open("example_practices.txt", "r").read()
+EXAMPLE_PRACTICES = make_practice_corpus()
 
 @app.route('/practice', methods=['GET'])
 def practice():
