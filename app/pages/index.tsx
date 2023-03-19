@@ -37,7 +37,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/icon.png" />
       </Head>
-      <main>
+      <main className="dark:bg-black">
         <div className="grid grid-cols-8 h-screen w-screen">
           <div className="flex items-center col-start-2 col-span-6 flex-col py-8">
             <div className="flex justify-end w-full py-4">
@@ -46,7 +46,8 @@ export default function Home() {
                 onClick={getNewPractice}
               />
             </div>
-            <div className=" p-4 border rounded border-gray-300 text-gray-100 h-full w-full mb-4">
+            <div className=" p-4 border rounded border-gray-300 text-gray-700 dark:text-gray-100 h-full w-full mb-4">
+              foo
               {practice.map((pLine, i) => (
                 <p key={`practice-${i}`}>{pLine}</p>
               ))}
