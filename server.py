@@ -3,11 +3,10 @@ import openai
 
 from dotenv import load_dotenv
 from enum import Enum
-from functools import cache
 
 from flask import Flask, jsonify, request
 from glob import glob
-from os.path import join, abspath
+from os.path import join
 
 app = Flask(__name__)
 
