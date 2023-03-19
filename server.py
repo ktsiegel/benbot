@@ -8,6 +8,8 @@ from flask import Flask, jsonify, request
 from glob import glob
 from os.path import join
 
+from db import PracticeDB
+
 app = Flask(__name__)
 
 # Initialize OpenAI
@@ -25,6 +27,7 @@ class Stroke(Enum):
 
 SUPPORTED_STROKES = {s.name for s in Stroke}
 
+DB = PracticeDB()
 
 def make_practice_corpus():
     full_path = join("example_practices", "*.txt")
@@ -53,8 +56,13 @@ def practice():
         ]
     )
 
+    response_content = answer["choices"][0]["message"]["content"]
+
+    # Save the practice to the database
+    DB.insert_practice(response_content, stroke_arg)
+
     data = {
-        'practiceLines': answer["choices"][0]["message"]["content"].split("\n")
+        'practiceLines': response_content.split("\n")
     }
     return jsonify(data)
 
@@ -67,6 +75,21 @@ def generate_prompt(stroke_arg):
         prompt += f" with a focus on {stroke_arg}"
     prompt += "."
     return prompt
+
+
+@app.route('/practices', methods=['GET'])
+def practices():
+    stroke_arg = request.args.get('stroke', default = None)
+    practices = []
+    if stroke_arg is None:
+        practices = DB.get_all_practices()
+    else:
+        practices = DB.get_practices_by_stroke(stroke_arg)
+
+    data = {
+        'practices': [p.dict() for p in practices]
+    }
+    return jsonify(data)
 
 
 if __name__ == '__main__':
