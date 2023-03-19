@@ -3,8 +3,7 @@ module.exports = () => {
     return [
       {
         source: "/practice/:path*",
-        // destination: process.env.NODE_ENV === "production" ? "https://benbot-server.onrender.com/practice/:path*" : "http://localhost:5000/practice/:path*",
-        destination: "http://localhost:8000/practice/:path*",
+        destination: process.env.NODE_ENV === "production" ? "https://benbot-server.onrender.com/practice/:path*" : "http://localhost:8000/practice/:path*",
       },
     ];
   };
