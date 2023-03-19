@@ -8,10 +8,13 @@ export default function Home() {
 
   const getNewPractice = () => {
     setLoading(true);
+    setPractice("");
     fetch("/practice")
       .then((res) => res.json())
       .then((data) => {
-        setPractice(data.message);
+        setPractice(
+          data?.practices.length ? data.practices[0] : "No practice found"
+        );
         setLoading(false);
       })
       .catch((err) => {
