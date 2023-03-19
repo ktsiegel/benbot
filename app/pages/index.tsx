@@ -1,15 +1,17 @@
 import Button from "@/components/Button";
+import Dropdown from "@/components/Dropdown";
 import Head from "next/head";
 import { useState } from "react";
 
 export default function Home() {
   const [practice, setPractice] = useState([] as string[]);
   const [loading, setLoading] = useState(false);
+  const [stroke, setStroke] = useState<string | undefined>(undefined);
 
   const getNewPractice = () => {
     setLoading(true);
     setPractice([]);
-    fetch("/practice")
+    fetch(`/practice${stroke ? `?stroke=${stroke}` : ""}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -26,6 +28,37 @@ export default function Home() {
       });
   };
 
+  const options = [
+    {
+      label: "Backstroke",
+      key: "BACKSTROKE",
+    },
+    {
+      label: "Breaststroke",
+      key: "BREASTSTROKE",
+    },
+    {
+      label: "Butterfly",
+      key: "BUTTERFLY",
+    },
+    {
+      label: "Freestyle",
+      key: "FREESTYLE",
+    },
+    {
+      label: "IM",
+      key: "IM",
+    },
+    {
+      label: "Kicking",
+      key: "KICKING",
+    },
+    {
+      label: "Pulling",
+      key: "PULLING",
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -41,6 +74,12 @@ export default function Home() {
         <div className="grid grid-cols-8 h-screen w-screen">
           <div className="flex items-center col-start-2 col-span-6 flex-col py-8">
             <div className="flex justify-end w-full py-4">
+              <Dropdown
+                selected={stroke}
+                options={options}
+                onClick={(key) => setStroke(key)}
+              />
+              <div className="w-4" />
               <Button
                 label={loading ? "Loading..." : "Generate practice"}
                 onClick={getNewPractice}
