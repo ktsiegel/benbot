@@ -35,14 +35,16 @@ export default function Home() {
         <link rel="icon" href="/icon.png" />
       </Head>
       <main>
-        <div className="flex items-center justify-center h-screen w-screen flex-col">
-          <div className="flex items-center">
+        <div className="grid grid-cols-8 h-screen w-screen">
+          <div className="flex items-center col-start-2 col-span-6 flex-col">
             <Button
               label={loading ? "Loading..." : "Generate practice"}
               onClick={getNewPractice}
             />
+            <div className=" p-4 border rounded border-gray-300 text-gray-100">
+              {practice}
+            </div>
           </div>
-          <div className="mt-8">{practice}</div>
         </div>
       </main>
     </>
