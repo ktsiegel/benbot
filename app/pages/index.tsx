@@ -47,8 +47,8 @@ export default function Home() {
               />
             </div>
             <div className=" p-4 border rounded border-gray-300 text-gray-100 h-full w-full mb-4">
-              {practice.map((pLine) => (
-                <p>{pLine}</p>
+              {practice.map((pLine, i) => (
+                <p key={`practice-${i}`}>{pLine}</p>
               ))}
             </div>
           </div>
