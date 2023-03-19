@@ -40,7 +40,7 @@ def practice():
     )
 
     data = {
-        'practices': [c["message"]["content"] for c in answer["choices"]]
+        'practiceLines': answer["choices"][0]["message"]["content"].split("\n")
     }
     return jsonify(data)
 
