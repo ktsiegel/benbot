@@ -3,3 +3,4 @@ env
 .vscode
 .pnpm-debug.log
 __pycache__
+database.db
