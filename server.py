@@ -46,7 +46,7 @@ def practice():
     stroke_arg = request.args.get('stroke', default = None)
 
     answer = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=[
             {"role": "system", "content": "You are a helpful swim coach tasked with generating swim practices for a swim team." \
             "Practices must be between 4000 and 5000 yards, and must include a warmup of 600-800 yards, " \

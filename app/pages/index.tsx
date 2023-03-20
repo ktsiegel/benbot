@@ -71,7 +71,7 @@ export default function Home() {
         <link rel="icon" href="/icon.png" />
       </Head>
       <main className="dark:bg-black">
-        <div className="grid grid-cols-8 h-screen w-screen">
+        <div className="grid grid-cols-8 min-h-screen w-screen">
           <div className="flex items-center col-start-2 col-span-6 flex-col py-8">
             <div className="flex justify-end w-full py-4">
               <Dropdown
