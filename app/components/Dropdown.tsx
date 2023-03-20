@@ -17,9 +17,12 @@ export default function Dropdown({
   onClick,
 }: DropdownProps) {
   return (
-    <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 h-11 items-center">
+    <Menu
+      as="div"
+      className="relative inline-block text-left max-sm:w-full max-sm:h-11 md:w-48"
+    >
+      <div className="h-full">
+        <Menu.Button className="inline-flex w-full h-full justify-center md:justify-between md:content gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 items-center">
           <div>
             {options.find((o) => o.key === selected)?.label ||
               "Choose practice focus"}
@@ -40,7 +43,7 @@ export default function Dropdown({
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute right-0 z-10 mt-2 w-full text-center md:text-left origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
             {options.map((option, i) => (
               <Menu.Item key={`stroke-option-${i}`}>

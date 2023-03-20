@@ -73,17 +73,19 @@ export default function Home() {
       <main className="dark:bg-black">
         <div className="grid grid-cols-8 min-h-screen w-screen">
           <div className="flex items-center col-start-2 col-span-6 flex-col py-8">
-            <div className="flex justify-end w-full py-4">
+            <div className="md:flex justify-end w-full py-4">
               <Dropdown
                 selected={stroke}
                 options={options}
                 onClick={(key) => setStroke(key)}
               />
-              <div className="w-4" />
-              <Button
-                label={loading ? "Loading..." : "Generate practice"}
-                onClick={getNewPractice}
-              />
+              <div className="md:w-4 max-sm:h-4" />
+              <div className="max-sm:w-full">
+                <Button
+                  label={loading ? "Loading..." : "Generate practice"}
+                  onClick={getNewPractice}
+                />
+              </div>
             </div>
             <div className=" p-4 border rounded border-gray-300 text-gray-700 dark:text-gray-100 h-full w-full mb-4">
               {practice.map((pLine, i) => (
