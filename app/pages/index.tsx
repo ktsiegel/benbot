@@ -86,7 +86,6 @@ export default function Home() {
               />
             </div>
             <div className=" p-4 border rounded border-gray-300 text-gray-700 dark:text-gray-100 h-full w-full mb-4">
-              foo
               {practice.map((pLine, i) => (
                 <p key={`practice-${i}`}>{pLine}</p>
               ))}
