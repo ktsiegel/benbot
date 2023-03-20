@@ -80,7 +80,7 @@ export default function Home() {
                 onClick={(key) => setStroke(key)}
               />
               <div className="md:w-4 max-sm:h-4" />
-              <div className="max-sm:w-full">
+              <div className="max-sm:w-full md:w-44 h-11">
                 <Button
                   label={loading ? "Loading..." : "Generate practice"}
                   onClick={getNewPractice}
